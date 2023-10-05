@@ -1,0 +1,35 @@
+{
+	"Name": "Stepan",
+	"Answers": [
+	{
+		"Question": "How old are you?",
+		"Answer": "21",
+		"Result": null
+	},
+	{
+		"Question": "How is your mood?",
+		"Answer": "Good",
+		"Result": null
+	},
+	{
+		"Question": "How would you rate this poll?",
+		"Answer": "Excelent",
+		"Result": true
+	},
+	{
+		"Question": "Pick anything you want.",
+		"Answer": "1",
+		"Result": null
+	},
+	{
+		"Question": "Pick 1:",
+		"Answer": "1",
+		"Result": true
+	},
+	{
+		"Question": "Pick ANYTHING BUT 1 (to show result as Wrong):",
+		"Answer": "2",
+		"Result": false
+	}
+	]
+}

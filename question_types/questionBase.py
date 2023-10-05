@@ -7,7 +7,7 @@ class QuestionBase:
     Attributes:
         __questionExplanation   The explanation of the question.
 
-        __questionAnswers       Answers for the questions.
+        __questionAnswers       Answers for the questions, if exist.
 
         __isAutoCheck           Does the question has particular right answer.
 
@@ -22,7 +22,7 @@ class QuestionBase:
 
     def __init__(self,
                  questionExplanation,
-                 questionAnswers,
+                 questionAnswers = None,
                  isAutoCheck = False,
                  rightAnswer = None):
         """Constructor of the class.
@@ -34,15 +34,13 @@ class QuestionBase:
 
     def getExplanation(self):
         """Function, which returns the generated explanation of the answer.
-        In case of terminal interface, it must return str.
         """
-        return str(self.__questionExplanation)
+        return self.__questionExplanation
     
     def getAnswers(self):
         """Function, which returns the generated answers' part of the UI.
-        In case of terminal interface, it must return str.
         """
-        return str(self.__questionAnswers)
+        return self.__questionAnswers
     
     def getRightAnswer(self):
         """Function, returning the right answer.
@@ -54,7 +52,7 @@ class QuestionBase:
             return self.__rightAnswer
         
     def isAnswerRight(self,
-                      answer):
+                      answer) -> bool:
         """Function, responsible for checking, wheather the answer is correct.
         """
         if not self.__isAutoCheck:

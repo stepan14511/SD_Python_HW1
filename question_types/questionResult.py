@@ -30,7 +30,7 @@ class QuestionResult:
         self.__answer = answer
         self.__isRightAnswer = question.isAnswerRight(answer)
 
-    def isRight(self):
+    def isRight(self) -> bool:
         """Function, returning whether the answer is correct.
         Return Null if the question is not AutoChecked.
         """
@@ -45,5 +45,3 @@ class QuestionResult:
         """Function, returning the answer itself.
         """
         return self.__answer
-
-print(help(QuestionResult))
